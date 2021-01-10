@@ -4,19 +4,31 @@ import subprocess
 import os
 
 while 1:
+
         a=input("\n"+os.getcwd()+" $ ")
+        
         if a[0:2]=="cd":
+        
                 try:
+                
                         os.chdir(a[3:])
+                        
                 except Exception  as e:
+                
                         print(a[3:]+" > >Is not valid path")
+                        
         if a=="ls":
+        
                 x=os.listdir()
                 for i in x:
                         print(i)
+                        
         if a=="ls -a":
+        
                 subprocess.call('C:\Windows\system32\WindowsPowerShell\\v1.0\\powershell.exe dir',shell=True)
+                
         if a=="clear":
+        
                 os.system('cls')
         try:
                 if a[:6]=='mkdir':
