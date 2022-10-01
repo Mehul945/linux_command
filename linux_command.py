@@ -3,6 +3,8 @@ import os
 
 while 1:
         a=input("\n"+os.getcwd()+" $ ")
+	if a=="nano":
+		os.system("nano")
         if a[0:2]=="cd":
                 try:
                         os.chdir(a[3:])
@@ -61,3 +63,6 @@ while 1:
         if a[:2]=='mv':
                 o=a.index('*')
                 subprocess.call('C:\Windows\system32\WindowsPowerShell\\v1.0\\powershell.exe Move-Item '+a[3:o]+' '+a[o+1:],shell=True)
+
+
+
