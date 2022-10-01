@@ -1,5 +1,5 @@
 import subprocess
-import os
+import os  
 
 while 1:
         a=input("\n"+os.getcwd()+" $ ")
